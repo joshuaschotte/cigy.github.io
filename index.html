@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Cigy</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+	<script src="../6MMa_JoshuaSchotte_GIPWebsite_16_/js/main.js"></script>
+	<link rel="icon" type="image/x-icon"
+		href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6Mma_JoshuaSchotte_GipLogo_16.png">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet"
+		type="text/css">
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+</head>
+
+<body>
+	<div class="background-image"></div>
+	<header class="header">
+		<div class="top-bar"></div>
+		<div class="container">
+			<img src="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg"
+				alt="Header Image">
+			<div class="about-us">
+				<h2>About Us</h2>
+				<p>Welcome to Film School Cinema, where we showcase movies created by our very own film students.
+					Our mission is to provide a platform for aspiring filmmakers to showcase their work and provide
+					a unique cinematic experience to our audience.</p>
+			</div>
+		</div>
+		<a href="" class="logo">
+			<img src="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6Mma_JoshuaSchotte_GipLogo_16.png" alt="Logo">
+		</a>
+		<nav>
+			<div class="menu-container">
+				<div id="hamburger-menu-btn" onclick="toggleMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<ul id="menu" class="menu">
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="#courses">Courses</a></li>
+					<li><a href="#mycigy">My Cigy</a></li>
+					<li><a href="#inschrijven">Inschrijven</a></li>
+					<li>
+						<form action="search.html" method="get" class="search-form">
+							<input type="text" name="search" placeholder="Zoeken...">
+						</form>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<section id="courses">
+			<h2>Courses</h2>
+			<div class="course">
+				<div class="course-details">
+					<h3>Editing</h3>
+					<p>Craft compelling visual stories with our editing course. Learn industry-standard software and
+						techniques from experienced editors to take your skills to the next level. Enroll now and
+						elevate your game.</p>
+				</div>
+				<div class="course-image">
+					<img src="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/Video Editing.png" alt="Course Image">
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-details">
+					<h3>Cinematography</h3>
+					<p>Explore the world of film with our diverse selection of courses. From screenwriting to
+						cinematography, we have something for everyone. Enroll now and discover your passion for the art
+						of filmmaking.</p>
+				</div>
+				<div class="course-image">
+					<img src="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/IllustratieCinematography.png"
+						alt="Course Image">
+				</div>
+			</div>
+			<div class="course">
+				<div class="course-details">
+					<h3>Directing</h3>
+					<p>Are you passionate about bringing stories to life through the art of filmmaking? Our directing
+						course offers a comprehensive curriculum designed to enhance your skills and unleash your
+						creativity as a director. Join us and learn the techniques and strategies employed by industry
+						professionals to create compelling and impactful films.</p>
+				</div>
+				<div class="course-image">
+					<img src="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/illustration directorjpg.jpg" alt="Course Image">
+				</div>
+			</div>
+		</section>
+
+		<div class="container">
+			<section id="Registration">
+				<h2>Registration Form</h2>
+				<div class="red-box">
+					<!-- <button onclick="enroll()">Enroll</button> -->
+					<div class="registration-form">
+						<form action="/submit-form" method="POST">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" placeholder="Your Name" required>
+
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" placeholder="Your Email" required>
+
+							<label for="course">Course:</label>
+							<select id="course" name="course">
+								<option value="editing">Editing</option>
+								<option value="directing">Directing</option>
+								<option value="cinematography">Cinematography</option>
+							</select>
+
+							<input type="submit" value="Register" onclick="Register()">
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+
+
+		<section id="mycigy">
+			<div class="subscription-chooser">
+				<h2>Choose Your Subscription</h2>
+				<div class="subscription-options">
+					<div class="subscription-option">
+						<h3>Basic</h3>
+						<p>Access to basic features</p>
+						<button class="subscribe-btn">Subscribe</button>
+					</div>
+					<div class="subscription-option">
+						<h3>Standard</h3>
+						<p>Access to standard features</p>
+						<button class="subscribe-btn">Subscribe</button>
+					</div>
+					<div class="subscription-option">
+						<h3>Premium</h3>
+						<p>Access to premium features</p>
+						<button class="subscribe-btn">Subscribe</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<ul>
+			<li>
+				<h3>Portfolio</h3>
+				<p>This is where we will present our own movies</p>
+			</li>
+		</ul>
+
+		<h1>Gallery made with nanogallery2</h1>
+
+		<div ID="ngy2p" data-nanogallery2='{
+			"itemsBaseURL": "6MMa_JoshuaSchotte_Fotogalerij_jpg' s_16_", "thumbnailWidth" : "200" , "thumbnailLabel" :
+			{ "position" : "overImageOnBottom" }, "thumbnailAlignment" : "center" , "thumbnailOpenImage" : true }'>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Alle Zitplaatsen_16.jpg"
+				data-ngthumb="" data-ngdesc="">Alle Zitplaatsen</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Brandslangkast_16.jpg"
+				data-ngthumb="" data-ngdesc="">Brandkast</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_inkom Zaal vannuit gang_16.jpg"
+				data-ngthumb="" data-ngdesc="">inkom</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Mengpaneel_16.jpg"
+				data-ngthumb="" data-ngdesc="">mengpaneel</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg"
+				data-ngthumb="" data-ngdesc="">projector</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Rechts onder doek_16.jpg"
+				data-ngthumb="" data-ngdesc="">doek</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_rechtsonder tot linksboven_16.jpg"
+				data-ngthumb="" data-ngdesc="">Rechtsonder</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Rolstoeltoegankelijk_16.jpg"
+				data-ngthumb="" data-ngdesc="">Rolstoel</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Shot stoelen achteraan zaal 1_16.jpg"
+				data-ngthumb="" data-ngdesc="">Stoelen</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Stoelen Achteraan_16.jpg"
+				data-ngthumb="" data-ngdesc="">Stoelen achteraan</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Uitgang Zaal_16.jpg"
+				data-ngthumb="" data-ngdesc="">Uitgang</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Vogelperspectief links naar rechts_16.jpg"
+				data-ngthumb="" data-ngdesc="">Links naar rechts</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_vogelperspectief rechtsboven naar linksonder_16.jpg"
+				data-ngthumb="" data-ngdesc="">Rechts naar linksboven</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Zaal Achter naar voor_16.jpg"
+				data-ngthumb="" data-ngdesc="">Achteraan</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_FotoGalerij_Zitplaatsen rechtsonder tot linksboven_16.jpg"
+				data-ngthumb="" data-ngdesc="">Rechtsboven</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_GIPIllustratie_Lokaal_16.jpg"
+				data-ngthumb="berlin3t.jpg" data-ngdesc="">Lokaal</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_Decors_16_.jpg"
+				data-ngthumb="berlin3t.jpg" data-ngdesc="">Decors</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_Cafetaria_16.jpg"
+				data-ngthumb="berlin3t.jpg" data-ngdesc="">Cafetaria</a>
+			<a href="../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_Fotogalerij_jpg's_16_/6MMa_JoshuaSchotte_Vector_filmProductie_16.jpg"
+				data-ngthumb="berlin3t.jpg" data-ngdesc="">FilmProductie</a>
+
+		</div>
+
+		<section id="videos">
+			<h2>Video</h2>
+			<div style="padding:75% 0 0 0;position:relative;"><iframe
+					src="https://player.vimeo.com/video/835951295?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+					style="position:absolute;top:0;left:0;width:100%;height:100%;" title="6MMa_GIP_Video"></iframe>
+			</div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+			<h2>Animation</h2>
+			<div style="padding:75% 0 0 0;position:relative;"><iframe
+					src="https://player.vimeo.com/video/835933386?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+					frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+					style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Animation"></iframe></div>
+			<script src="https://player.vimeo.com/api/player.js"></script>
+		</section>
+
+		<section id="contact">
+			<h2>Contact</h2>
+			<div class="contact-form">
+				<form action="/submit-form" method="POST">
+					<input type="text" id="name" name="name" placeholder="Your Name">
+					<input type="email" id="email" name="email" placeholder="Your Email">
+					<textarea id="message" name="message" placeholder="Your Message"></textarea>
+					<input type="submit" value="Send Message">
+				</form>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="footer-container">
+			<div class="footer-column">
+				<p>info@cigy.com</p>
+				<p>+32 15 123 456</p>
+				<p>Hoogstraat 123, 2800 Mechelen, België</p>
+				<p>Openingsuren:
+					maandag - vrijdag: 08:00 - 12:00 en 13:00 - 15:30</p>
+			</div>
+		</div>
+		<div class="social-media">
+			<a href="https://www.facebook.com/" class="social-icon">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="https://twitter.com/i/flow/login" class="social-icon">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="https://www.instagram.com/" class="social-icon">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="https://www.youtube.com/" class="social-icon">
+				<i class="fab fa-youtube"></i>
+			</a>
+		</div>
+		<p>&copy; Film School Cigy 2023</p>
+	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up fa-rotate-45"></i></button>
+</body>
+
+<script>
+	function toggleMenu() {
+		var menuContainer = document.querySelector('.menu-container');
+		var hamburgerMenu = document.getElementById('hamburger-menu-btn');
+
+		menuContainer.classList.toggle('open'); // Toggle the "open" class on the menu container
+		hamburgerMenu.classList.toggle('active'); // Toggle the "active" class on the hamburger menu button
+	}
+
+	function topFunction() {
+		document.documentElement.scrollTop = 0;
+	}
+
+	function Register() {
+		var selectedCourse = document.getElementById("courseSelect").value;
+		var confirmation = confirm("You have registered for the " + selectedCourse + " course!, we will contact you via mail");
+
+		if (confirmation) {
+			alert("You have registered for the " + selectedCourse + " course!, we will contact you via mail")
+		}
+	}
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function () { scrollFunction() };
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+		}
+	}
+
+
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+		console.log("test")
+	}
+</script>
+
+</html>
