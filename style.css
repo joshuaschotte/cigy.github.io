@@ -13,11 +13,12 @@ body {
 	color: #a8a8a8;
 	scrollbar-width: none;
 	overflow-x: hidden;
+	z-index: 1000;
 }
 
 body::after {
 	content: "";
-	background-image: url(../img/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg);
+	background-image: url(6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -31,17 +32,15 @@ body::after {
 }
 
 .background-image {
-	position: fixed;
-	top: 0;
-	left: 0;
 	width: 100%;
-	height: 100%;
-	background-image: url('../img/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg');
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
 	z-index: -1;
 }
 
 .header {
-	position: relative;
+	position: flex;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -53,15 +52,19 @@ body::after {
 	background-position: center;
 	z-index: 1001;
 	transition: background 0.3s ease;
-	padding: 20px;
+	padding: 0px;
 	text-align: center;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 0;
+	z-index: 1;
 }
 
 header img {
+	position: fixed;
+	top: 0;
+	left: 0;
 	max-width: 100%;
 	max-height: 100%;
 	width: 100%;
@@ -103,10 +106,10 @@ header img {
 .about-us {
 	position: absolute;
 	top: 60%;
-	left: 220px;
-	/* Adjust the distance from the left side */
+	left: 250px;
+	max-width: 585px;
+	text-align: initial;
 	transform: translate(0, -50%);
-	/* Remaining styles */
 }
 
 .button {
@@ -137,12 +140,9 @@ header img {
 }
 
 .container {
-	position: relative;
-	z-index: 1000;
-	text-align: left;
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 20px;
+	width: 100%;
+	margin: 0px;
+	padding: 0;
 }
 
 .header-image::after {
@@ -158,13 +158,17 @@ header img {
 
 .header::after {
 	content: "";
-	position: absolute;
+	background-image: url(6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.2;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 127.6vh;
-	background-color: rgba(0, 0, 0, 0.5);
-	/* Adjust the opacity (0.5) for the desired darkness */
+	height: 100%;
+	z-index: -1;
 }
 
 .menu-container {
@@ -172,93 +176,68 @@ header img {
 	align-items: center;
 }
 
-#hamburger-menu-btn {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 20px;
+.burger {
+	border: 0;
+	padding: 0;
+	background-color: transparent;
+	position: relative;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 30px;
 	cursor: pointer;
-	margin-right: 60px;
-}
 
-#menu {
-	/* display: none; */
-	visibility: hidden;
-}
+	span {
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #000;
+		transition: all .3s ease;
+		opacity: 1;
 
-#menu.active {
-	display: block;
-}
+		&:nth-of-type(1) {
+			top: 6px;
+		}
 
-#line1,
-#line2,
-#line3 {
-	width: 30px;
-	height: 3px;
-	background-color: #333;
-	margin: 5px 0;
-}
+		&:nth-of-type(2) {
+			top: 12px;
+		}
 
-.active {
-	display: block;
-}
+		&:nth-of-type(3) {
+			top: 18px;
+		}
+	}
 
-.line {
-	width: 100%;
-	height: 2px;
-	background-color: #fff;
-}
+	&:hover {
+		span {
 
-.menu {
-	position: absolute;
-	top: 50px;
-	right: 0;
-	width: 300px;
-	margin: 0;
-	padding: 0;
-	background-color: #333;
-	transition: right 0.3s ease;
-	transition: transform 0.5s ease;
-	transform: translateX(100%);
-	z-index: 2000;
-	display: flex;
-	border-radius: 5px;
-}
+			&:nth-of-type(1),
+			&:nth-of-type(3) {
+				top: 12px;
+				background-color: red;
+			}
 
-.menu.active {
-	right: 0;
-	transform: translateX(0);
-}
+			&:nth-of-type(1) {
+				transform: rotate(45deg);
+			}
 
-.menu ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 20px;
-}
+			&:nth-of-type(2) {
+				opacity: 0;
+			}
 
-.menu ul li {
-	margin-bottom: 10px;
-}
+			&:nth-of-type(3) {
+				transform: rotate(-45deg);
+			}
+		}
+	}
 
-.menu ul li a {
-	color: #fff;
-	text-decoration: none;
-}
-
-.menu ul li a:hover {
-	text-decoration: underline;
-}
-
-.menu li {
-	margin-right: 20px;
-}
-
-.menu a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 16px;
-	transition: color 0.3s ease;
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 20px 0 #1275dc;
+		background-color: rgb(18 117 220 / 37%);
+	}
 }
 
 .logo {
@@ -272,6 +251,9 @@ header img {
 
 .logo img {
 	height: 50px;
+	width: 70px;
+	margin-top: 60px;
+	margin-left: 60px;
 }
 
 header.scrolled {
@@ -283,41 +265,16 @@ header.scrolled .top-bar {
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
 
-nav {
-	display: flex;
-	justify-content: flex-end;
+.background-image {
+	opacity: 100%;
 }
 
-nav li:hover a {
-	filter: brightness(120%);
+.red-box {
+	opacity: 100%;
 }
 
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	justify-content: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-nav li {
-	display: inline-block;
-	margin-right: 20px;
-	display: block;
-	margin-bottom: 10px;
-}
-
-.menu li:last-child {
-	margin-right: 0;
-}
-
-nav a {
-	color: #ffffff;
-	text-decoration: none;
-	transition: color 0.3s ease;
-	color: #a8a8a8;
+.registration-form {
+	opacity: 100%;
 }
 
 .search-form {
@@ -427,7 +384,7 @@ main {
 }
 
 .course {
-	display: flex;
+	display: fixed;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
@@ -674,6 +631,21 @@ section p {
 	cursor: pointer;
 }
 
+.contact-form button {
+	background-color: #f44336;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.contact-form button:hover {
+	background-color: #d32f2f;
+}
+
+.contact-form button:focus {
+	outline: none;
+}
+
 .contact-form input[type="submit"]:hover {
 	background-color: #b50000
 }
@@ -711,6 +683,8 @@ footer {
 	background-color: #030303;
 	color: #fff;
 	padding: 20px;
+	z-index: 9999;
+	position: fixed;
 }
 
 .footer-container {
@@ -810,61 +784,7 @@ footer {
 	}
 }
 
-@media only screen and (min-width: 601px) {
-	.header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-		background-image: url("../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg");
-		background-size: cover;
-		background-position: center;
-	}
-
-	.container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.about-us {
-		flex: 1;
-		margin-left: 50px;
-	}
-
-	.logo {
-		position: absolute;
-		top: 20px;
-		left: 20px;
-	}
-
-	.menu {
-		display: flex;
-		list-style: none;
-		margin-top: 30px;
-	}
-
-	.search-form {
-		margin-left: 20px;
-	}
-
-	.background-image {
-		display: block;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url("../6MMa_JoshuaSchotte_GIPWebsite_16_/img/6MMa_JoshuaSchotte_FotoGalerij_Projector_16.jpg");
-		background-size: cover;
-		background-position: center;
-		z-index: -1;
-	}
-}
-
+/* 
 @media only screen and (max-width: 480px) {
 	.header-image {
 		padding: 5px;
